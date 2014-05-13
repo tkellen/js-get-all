@@ -19,7 +19,7 @@ describe('getAll', function () {
       })
     };
     getAll({
-      page: 0,
+      startPage: 0,
       perPage: 30,
       request: myRequestFn
     }, function (err, results) {

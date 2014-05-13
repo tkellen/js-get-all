@@ -1,13 +1,13 @@
 module.exports = function (opts, callback) {
   var collection = [];
-  var page = opts.page;
+  var startPage = opts.startPage;
   var perPage = opts.perPage;
   var request = opts.request;
-  if (!page) {
-    page = 0;
+  if (!startPage) {
+    startPage = 0;
   }
   if (!perPage) {
-    perPage = 100;
+    throw new Error('You must specify a number of items per page.');
   }
   if (!request) {
     throw new Error('You must provide a request function.');
@@ -26,6 +26,6 @@ module.exports = function (opts, callback) {
       }
     });
   };
-  fetch(page);
+  fetch(startPage);
 };
 

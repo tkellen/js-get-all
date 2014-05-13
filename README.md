@@ -23,7 +23,7 @@ var myRequestFn = function (page, perPage, callback) {
 };
 
 getAll({
-  page: 0,
+  startPage: 0,
   perPage: 30,
   request: myRequestFn
 }, function (err, results) {
@@ -37,4 +37,5 @@ getAll({
 
 ## Release History
 
+* 2014-05-12 - v0.2.0 - require perPage, rename page to startPage
 * 2014-05-12 - v0.1.0 - initial release
