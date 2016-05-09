@@ -12,7 +12,8 @@ const github = new GH({version: "3.0.0"});
 var myRequestFn = function (page, perPage, callback) {
   github.repos.getFromOrg({
     org: 'github',
-    page: page
+    page: page,
+    per_page: perPage
   }, function (err, repos) {
     if (err) {
       callback(err);
